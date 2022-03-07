@@ -135,7 +135,7 @@ main {
   opacity: 0;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1082px) {
   .mobile-bg {
     display: none;
   }
@@ -143,33 +143,52 @@ main {
   .desktop-bg-box {
     display: block;
     position: absolute;
-    top: 43%;
-    left: 0;
+    top: 40%;
+    left: -5.5rem;
     z-index: 10;
   }
 
-  .container {
-    background: url(/images/bg-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: -350% 74%;
-    background-size: 86%;
-    margin: 0;
-    padding: 2rem 0;
+  main {
+    max-width: 1000px;
+    width: 100%;
+    min-height: 72px;
   }
 
-  .desktop-bg {
-    display: block;
-    margin-top: 1rem;
+  .container {
+    margin: 0;
+    min-height: 530px;
     position: relative;
     overflow: hidden;
   }
 
-  .desktop-bg img {
+  .desktop-bg {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    overflow: hidden;
+  }
+
+  .desktop-bg img:first-child {
     transform: translateX(-5rem);
+    position: relative;
+    z-index: 2;
+  }
+
+  .desktop-bg img:last-child {
+    position: absolute;
+    top: -10rem;
+    left: -27rem;
+    max-width: 52rem;
+    z-index: 1;
   }
 
   .accordion {
-    padding: 0em 3em;
+    max-width: 60rem;
+    padding: 2em 5em 0em 2em;
     flex: 1 0 30%;
+  }
+
+  .accordion h1 {
+    align-self: flex-start;
   }
 }
